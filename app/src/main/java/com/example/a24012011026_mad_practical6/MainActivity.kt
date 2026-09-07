@@ -23,14 +23,17 @@ class MainActivity : AppCompatActivity(), Animation.AnimationListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val clockImageview = findViewById<ImageView>(R.id.img1)
+        clockImageview.setBackgroundResource(R.drawable.alarm_animation_list)
+        clockAnimation = clockImageview.background as AnimationDrawable
+        val heartImageView = findViewById<ImageView>(R.id.img2)
+        heartImageView.setBackgroundResource(R.drawable.heart_animation_list)
+        heartAnimation = findViewById<ImageView>(R.id.img2).background as AnimationDrawable
+//
     }
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) {
-            clockAnimation = findViewById<ImageView>(R.id.img1).background as
-                    AnimationDrawable
-            heartAnimation = findViewById<ImageView>(R.id.img2).background as
-                    AnimationDrawable
             clockAnimation.start()
             heartAnimation.start()
         } else {
@@ -38,14 +41,17 @@ class MainActivity : AppCompatActivity(), Animation.AnimationListener {
             heartAnimation.stop()
         }
     }
-    override fun onAnimationStart(animation: Animation?) {
-        Log.d("AnimationStart", "Animation started")
-    }
+
     override fun onAnimationEnd(animation: Animation?) {
-        Log.d("AnimationEnd", "Animation ended")
-        clockAnimation.start()
+
     }
+
     override fun onAnimationRepeat(animation: Animation?) {
-        Log.d("AnimationRepeat", "Animation has repeated")
+
     }
+
+    override fun onAnimationStart(animation: Animation?) {
+
+    }
+
 }
