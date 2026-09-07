@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".MainActivity">
 
         <TextView
@@ -27,7 +26,6 @@
             android:layout_margin="10dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="20dp"
-            android:backgroundTint="#F0F2FF"
             app:layout_constraintTop_toBottomOf="@id/MAD_Pr">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -61,7 +59,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:textColor="#616161"
                     android:textSize="15dp"
                     android:text="By pressing buttons, Alarm can be created and cancelled."
                     app:layout_constraintTop_toBottomOf="@id/txt1">
@@ -73,25 +70,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:textColor="#616161"
                     android:textSize="15sp"
                     android:text="Check Current time by looking below real digital clock."
                     app:layout_constraintTop_toBottomOf="@id/txt2">
 
                 </TextView>
-
-                <TextClock
-                    android:id="@+id/Time1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:format12Hour="hh:mm:ss a MMM, dd yyyy"
-                    android:layout_margin="10dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    app:layout_constraintTop_toBottomOf="@id/txt3">
-
-                </TextClock>
 
                 <ImageView
                     android:id="@+id/img2"
@@ -109,12 +92,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#82A7F5"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:drawableLeft="@drawable/baseline_alarm_add_24"
                     android:drawableTint="@color/white"
                     android:text="Create Alarm"
                     app:layout_constraintStart_toStartOf="@id/txt3"
-                    app:layout_constraintTop_toBottomOf="@id/Time1">
+                    app:layout_constraintTop_toBottomOf="@id/txt3">
 
                 </Button>
 
@@ -124,12 +107,12 @@
                     android:layout_height="wrap_content"
                     android:textColor="#82A7F5"
                     android:background="@android:color/transparent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="30dp"
                     android:drawableLeft="@drawable/baseline_alarm_off_24"
                     android:drawableTint="#82A7F5"
                     android:text="Cancel Alarm"
                     app:layout_constraintStart_toEndOf="@id/CreateAlarm"
-                    app:layout_constraintTop_toBottomOf="@id/Time1">
+                    app:layout_constraintTop_toBottomOf="@id/txt3">
 
                 </Button>
 
