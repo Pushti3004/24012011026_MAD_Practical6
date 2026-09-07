@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), Animation.AnimationListener {
         val heartImageView = findViewById<ImageView>(R.id.img2)
         heartImageView.setBackgroundResource(R.drawable.heart_animation_list)
         heartAnimation = findViewById<ImageView>(R.id.img2).background as AnimationDrawable
-//
+
     }
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
@@ -53,5 +53,4 @@ class MainActivity : AppCompatActivity(), Animation.AnimationListener {
     override fun onAnimationStart(animation: Animation?) {
 
     }
-
 }
